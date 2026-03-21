@@ -1,0 +1,135 @@
+header {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+header img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Ajusta la imagen sin estirarla*/
+    z-index: -1;
+}
+
+/*Estilo General*/
+body {
+    background-color: #e6e3db;
+}
+h2 {
+    font-family: 'Sans Serif';
+    font-size: 25px;
+    color: #5f6b27;
+    font-weight: bold;
+}
+h3 {
+    font-family: 'Sans Serif';
+    font-size: 20px;
+    color: #392b13;
+    font-weight: bold;
+}
+p {
+    font-family: 'Suiza';
+    font-size: 15px;/*Tamaño de letra*/
+    color: black;
+    line-height: 1.1;/*Interlineado*/
+}
+/*------------------------------------------------------------*/
+/*-----------Nav-----------*/
+nav {
+    margin: 0;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    background-color: #5f6b27;
+    margin-top: 0px;/*espacio entre nav y header*/
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 15px; /* Espacio entre botones */
+}
+/* Estilo de los botones*/
+.btn-nav {
+    text-decoration: none;
+    color: #eae4d3; /* Color del link*/
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Transición suave */
+}
+/* ---Al pasar el ratón--- */
+.btn-nav:hover {
+    background-color: #eae4d3; /*color de fondo al que cambian los botones*/
+    color: #5f6b27; /* El texto cambia al color*/
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /*sombra*/
+}
+/*----------------------------------------------------------------*/
+/* seccions*/
+.seccion-der {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 13%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+/* Ajustes de tamaño de la imagen */
+.seccion-der img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.sesscion-iz{
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente*/
+    gap: 13%; /* Espacio entre la imagen y el texto */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+/* Ajustes de tamaño de la imagen */
+.sesscion-iz img {
+    width: 50%; /*Ancho*/
+    height: 200px; /*Alto*/
+    object-fit: cover; /*Ajusta la imagen*/
+}
+.texto-contenido {
+    display: flex;
+    flex-direction: column; /* Coloca elementos uno debajo de otro */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 200px; /*altura definida */
+    text-align: center; /* Asegura el centrado de las líneas largas */
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+}
+footer img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Ajusta la imagen*/
+    opacity: 0.7; /* transparencia de la imagen */
+    transition: opacity 0.3s; /*suaviza el cambio */
+}
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*centrado*/
+    border-radius: 5px;
+}
+footer h2 {
+    color: black;
+}
