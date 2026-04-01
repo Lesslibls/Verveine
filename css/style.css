@@ -18,6 +18,7 @@ header img {
 body {
     background-color: #e6e3db;
 }
+
 h2 {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 25px;
@@ -30,7 +31,7 @@ h3 {
     color: #392b13;
     font-weight: bold;
 }
-p, li, span {
+p, span {
     font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 15px;/*Tamaño de letra*/
     color: black;
@@ -42,6 +43,7 @@ p, li, span {
   font-style: italic;
   font-size: 1.1rem;
 }
+
 /*------------------------------------------------------------*/
 /*-----------Nav-----------*/
 nav {
@@ -74,8 +76,42 @@ nav {
     color: #5f6b27; /* El texto cambia al color*/
     box-shadow: 0 4px 10px rgba(0,0,0,0.2); /*sombra*/
 }
+
+/* --- El menu se queda aunque se haga scrol --- */
+.top-bar {
+    position: sticky; /* Se queda "pegado" al llegar al tope */
+    top: 0;           /* Distancia desde arriba para pegarse */
+    z-index: 1000;    /* El menú pase por encima de las fotos */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* --- FLEXBOX EN EL NAV --- */
+nav {
+    display: flex;             /* Activamos Flexbox */
+    justify-content: center;    /* Centra los items horizontalmente*/
+    align-items: center;        /* Centra verticalmente (eje cruzado) */
+    background-color: #5f6b27;
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben en celular, saltan de línea */
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
 /*----------------------------------------------------------------*/
 /* seccions*/
+/* --- RESPONSIVE --- */
+.seccion-sucursal {
+    display: flex;
+    flex-direction: column;    /* En celular: imagen arriba, texto abajo */
+    gap: 20px;
+    padding: 40px 5%;
+    border-bottom: 1px solid #ccc;
+}
 .seccion-der {
     display: flex;
     flex-direction: row-reverse;
@@ -84,6 +120,24 @@ nav {
     padding: 10px;
     border: 1px solid #ccc;
 }
+
+/* Ajuste para Pantallas Grandes (PC) */
+@media (min-width: 768px) {
+    .seccion-sucursal {
+        flex-direction: row;   /* En PC: uno al lado del otro */
+        align-items: center;
+    }
+
+    .seccion-der {
+        flex-direction: row-reverse; /* Imagen a la derecha */
+    }
+
+    .seccion-sucursal img {
+        width: 50%;            /* La imagen ocupa la mitad */
+        height: 400px;         /* Más alta en PC */
+    }
+}
+
 /* Ajustes de tamaño de la imagen */
 .seccion-der img {
     width: 50%;
@@ -129,12 +183,16 @@ footer img {
     opacity: 0.7; /* transparencia de la imagen */
     transition: opacity 0.3s; /*suaviza el cambio */
 }
-.texto {
-    position: absolute;
+.texto-footer {
+    position: absolute;        /* Se posiciona respecto al footer */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);/*centrado*/
-    border-radius: 5px;
+    transform: translate(-50%, -50%); /* Truco para centrado perfecto */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
 }
 footer h2 {
     color: black;

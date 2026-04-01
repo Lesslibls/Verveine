@@ -11,41 +11,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Lato:wght@300;400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img class="imgEncabezado" src="./img/Diseño1.png" alt="">
-    </header>
+    <div class="flex-container">
+        <header>
+            <img class="imgEncabezado" src="./img/Diseño1.png" alt="">
+         </header>
+        <div class="top-bar"></div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="./pages/menu.html" class="btn-nav">Descubre nuestra cocina</a></li>
+                    <li><a href="./pages/vinos.html" class="btn-nav">Vinos y Bebidas</a></li>
+                    <li><a href="./pages/recervaciones.html" class="btn-nav">Recervaciones</a></li>
+                </ul>
+            </nav>
+        </div>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="./pages/menu.html" class="btn-nav">Descubre nuestra cocina</a></li>
-            <li><a href="./pages/vinos.html" class="btn-nav">Vinos y Bebidas</a></li>
-            <li><a href="./pages/recervaciones.html" class="btn-nav">Recervaciones</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
+    <main class="content-wrapper">
+        <section class="sobre-nosotros">
             <h2>Sobre nosotros</h2>
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Verveine, fundado en 1990, nace de la pasión por la herencia europea...</p>
             </div>
         </section>
 
-        <section>
+        <section class="sucursales">
             <div class="seccion-der" >
                 <img src="./img/Sucursal1.png" alt="Imagen de sucursal 1, muestra el interior de un restaurante acogedor, lleno de platas">
                 <div class="texto-contenido">
-                    <h2>Sucursal Italia</h2>
+                    <h2>Sucursal:Verveine "La Cave" (La Cava)</h2>
                     <h3>Dirección</h3>
-                    <p>Calle, colonia, numero</p>
+                    <p>Av. de los Cipreses No. 402, Col. Antigua Hacienda</p>
                 </div>
             </div>
+
             <div class="sesscion-iz">
                 <img src="./img/Sucursal2.png" alt="Imagen de sucursal 2, muestra un jardin con mesas">
                 <div class="texto-contenido">
-                    <h2>Sucursal México</h2>
+                    <h2>Sucursal: Verveine "Le Jardin" (El Jardín)</h2>
                     <h3>Dirección</h3>
-                    <p>Calle, colonia, numero</p>
+                    <p>Calle del Oro No. 15, Distrito Histórico</p>
                 </div>
             </div>
         </section>
@@ -53,11 +56,12 @@
 
     <footer>
         <img src="./img/principal.png" alt="Imagen de mesa de restaurante">
-        <div class="texto">
-            <h2 class="texto">Contacto</h2>
+        <div class="texto-footer">
+            <h2 >Contacto</h2>
             <p>Can you help translate this site into a foreign language ? Please email us with details if you can help</p>
         </div>
     </footer>
-    
+
+    </div>
 </body>
 </html>
