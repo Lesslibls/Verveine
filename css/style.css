@@ -116,7 +116,7 @@ nav {
 }
 /*---------------Media ESCRITORIO (Más de 1024px)---------------*/
 @media (min-width: 1024px) {
-    /* Aquí aplicamos el diseño que ya tenías de lado a lado */
+  
     .seccion-der {
         flex-direction: row-reverse; /* Imagen a la derecha, texto izquierda */
     }
