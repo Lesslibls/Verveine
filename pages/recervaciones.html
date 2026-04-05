@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vervierne</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-reservacion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Lato:wght@300;400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="body-reservaciones">
+
+    <main class="main-reservas">
+            <section class="container-reserva">
+                
+                <div class="card-reserva">
+                    <div class="header-card">
+                        <h2>Reserva tu Mesa</h2>
+                        <p>Vive la experiencia Verveine desde 1990</p>
+                    </div>
+
+                    <form action="#" class="form-reserva">
+                        <div class="input-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre" required>
+                        </div>
+
+                        <div class="row-flex">
+                            <div class="input-group">
+                                <label for="fecha">Fecha</label>
+                                <input type="date" id="fecha" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="personas">Personas</label>
+                                <input type="number" id="personas" min="1" max="10" value="2">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sucursal">Sucursal</label>
+                            <select id="sucursal">
+                                <option value="jardin">Le Jardin (Exterior)</option>
+                                <option value="cave">La Cave (Interior)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="mensaje">Alergias o Notas</label>
+                            <textarea id="mensaje" rows="2" placeholder="Opcional"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Confirmar Reserva</button>
+                        <a href="../index.html" class="volver">Volver al inicio</a>
+                    </form>
+                </div>
+
+            </section>
+        </main>
+
+
+    </div>
+</body>
+</html>

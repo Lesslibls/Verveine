@@ -1,0 +1,114 @@
+/* --- ESTILOS PÁGINA RESERVACIONES --- */
+
+.body-reservaciones {
+    /* Imagen de fondo que cubre toda la pantalla */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('../img/principal.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh; /* Ocupa el 100% del alto de la ventana */
+}
+
+.main-reservas {
+    display: flex;
+    justify-content: center; /* Centrado horizontal Flexbox */
+    align-items: center;     /* Centrado vertical Flexbox */
+    height: 100%;
+    padding: 20px;
+}
+
+/* --- LA CARD TRANSPARENTE --- */
+.card-reserva {
+    background: rgba(255, 255, 255, 0.85); /* Fondo blanco traslúcido */
+    backdrop-filter: blur(8px);/* Efecto de desenfoque del fondo */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 500px; 
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-card h2 {
+    margin-top: 0;
+    color: #5f6b27;
+}
+
+/* --- ESTILOS DE FORMULARIO (Responsive) --- */
+.form-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-group label {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #392b13;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: 'Lato', sans-serif;
+}
+
+/* Fila doble para Fecha y Personas */
+.row-flex {
+    display: flex;
+    gap: 15px;
+}
+
+.row-flex .input-group {
+    flex: 1; /* Ambos ocupan el mismo espacio */
+}
+
+/* BOTÓN DE ACCIÓN */
+.btn-enviar {
+    background-color: #5f6b27;
+    color: #eae4d3;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #392b13;
+    letter-spacing: 1px;
+}
+
+.volver {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: #5f6b27;
+    text-decoration: none;
+}
+
+/* --- RESPONSIVE CELULAR --- */
+@media (max-width: 480px) {
+    .card-reserva {
+        padding: 20px;
+    }
+    .row-flex {
+        flex-direction: column; /* En celular se apilan */
+    }
+}
