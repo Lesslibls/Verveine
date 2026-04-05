@@ -56,9 +56,10 @@ nav {
 }
 .nav-links {
     display: flex;
-    list-style: none;
-    padding: 0;
-    gap: 15px; /* Espacio entre botones */
+    flex-direction: column; /* Columna por defecto en móvil */
+    align-items: center;
+    gap: 10px;
+    padding: 15px; /* Espacio entre botones */
 }
 /* Estilo de los botones*/
 .btn-nav {
@@ -101,9 +102,58 @@ nav {
     gap: 20px;
     list-style: none;
 }
+/*---------------Media movilTABLETS (De 600px a 1024px)---------------*/
+@media (min-width: 600px) {
+    .nav-links {
+        flex-direction: row; /* Cambia a horizontal */
+        justify-content: center;
+    }
 
+    p {
+        font-size: 17px; /* Aumentamos legibilidad */
+        line-height: 1.5;
+    }
+}
+/*---------------Media ESCRITORIO (Más de 1024px)---------------*/
+@media (min-width: 1024px) {
+    /* Aquí aplicamos el diseño que ya tenías de lado a lado */
+    .seccion-der {
+        flex-direction: row-reverse; /* Imagen a la derecha, texto izquierda */
+    }
+
+    .seccion-iz {
+        flex-direction: row; /* Imagen a la izquierda, texto derecha */
+    }
+
+    .seccion-der img, .seccion-iz img {
+        width: 50%; /* Comparten el espacio al 50% */
+        height: 400px;
+    }
+
+    .texto-contenido {
+        width: 40%; /* Dejamos aire a los lados del texto */
+    }
+}
 /*----------------------------------------------------------------*/
 /* seccions*/
+/*Media movil*/
+.seccion-der, .seccion-iz {
+    display: flex;
+    flex-direction: column; /* Apilados verticalmente */
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.seccion-der img, .seccion-iz img {
+    width: 100%; /* La imagen toma todo el ancho disponible */
+    height: 250px;
+}
+
+.texto-contenido {
+    width: 100%;
+    text-align: center;
+}
 /* --- RESPONSIVE --- */
 .seccion-sucursal {
     display: flex;
