@@ -26,7 +26,7 @@ body, html {
 .menu-full-section {
     position: relative;
     width: 100%;
-    height: 80vh; /* Altura de pantalla casi completa */
+    height: 80vh; /* Altura */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1.5s ease; /* Animación lenta tipo video */
+    transition: transform 1.5s ease; /* Animación lenta */
 }
 
 /* Efecto Zoom al hacer Scroll/Hover */
@@ -48,7 +48,7 @@ body, html {
     transform: scale(1.1);
 }
 
-/* EL TEXTO SOBRE LA IMAGEN */
+/* TEXTO SOBRE LA IMAGEN */
 .info-overlay {
     position: relative;
     z-index: 10;
@@ -67,6 +67,7 @@ body, html {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     margin-bottom: 10px;
+    color: #eae4d3
 }
 
 .info-overlay p {
@@ -111,9 +112,66 @@ body, html {
 /* MEDIA QUERIES (RESPONSIVO) */
 @media (max-width: 768px) {
     .menu-full-section {
-        height: 60vh; /* Un poco más bajo en móvil */
+        height: 60vh;
     }
     .info-overlay h3 {
         font-size: 2rem;
     }
+}
+
+/* --- GALERÍA DESPLAZABLE (SLIDER) --- */
+
+.cava-extra {
+    background-color: #eae4d3;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.slider-horizontal {
+    display: flex;             /* Flexbox para ponerlos en fila */
+    overflow-x: auto;          /* Permite el scroll horizontal */
+    scroll-snap-type: x mandatory; /* Hace que las fotos "se peguen" al deslizar */
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none;     /* Oculta la barra en Firefox */
+}
+
+.slider-horizontal::-webkit-scrollbar {
+    display: none;             /* Oculta la barra en Chrome/Safari */
+}
+
+.vino-card {
+    flex: 0 0 280px;           /* No se encogen, mantienen 280px de ancho */
+    scroll-snap-align: center; /* Se centran al deslizar */
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.vino-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;       /* Para que las botellas se vean completas */
+    margin-bottom: 10px;
+}
+
+.vino-card span {
+    font-family: 'Playfair Display', serif;
+    color: #5f6b27;
+    font-weight: bold;
+}
+
+/* --- ESTILOS EXCLUSIVOS PÁGINA DE VINOS --- */
+
+/* Fondo independiente para la página de vinos */
+.vino-page {
+    background-color: #1a261b; /* Un verde profundo y elegante */
+}
+
+/* Ajuste de color de títulos de sección para el fondo oscuro */
+.vino-page .categoria-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
